@@ -26,5 +26,7 @@ Semua dataset diimport ke **Google BigQuery** dalam 1 dataset bernama `kimia_far
 ## 📊 Dashboard
 👉 [Lihat Dashboard Google Looker Studio](https://lookerstudio.google.com/reporting/b749e4e5-f157-48e0-b29f-839d1c63a9a9/page/oQjZF/edit)
 
+---
+
 ## 👨‍💻 Kontributor
 Aya Reggyna Octavia – Peserta Program PBI Big Data Analytics Rakamin Academy x Kimia Farma
