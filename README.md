@@ -1,25 +1,50 @@
 # Final Task – Big Data Analytics 
 
 Repositori ini berisi pengerjaan **Final Task Program PBI Rakamin Academy x Kimia Farma**.  
-Project ini mencakup integrasi dataset Kimia Farma ke Google BigQuery, pembuatan tabel analisa, serta visualisasi insight menggunakan Google Looker Studio.
+Project ini mencakup integrasi dataset Kimia Farma ke Google BigQuery, pembuatan tabel analisa menggunakan SQL, serta visualisasi insight bisnis melalui Google Looker Studio.
 
 ---
 
 ## 📂 Struktur Repository
 - `queries/` → berisi query SQL untuk pembuatan tabel analisa dan agregasi.  
-- `images/` → dokumentasi berupa screenshot query hasil eksekusi / dashboard Looker Studio.  
-- `README.md` → panduan singkat penggunaan repository ini.  
+- `README.md` → panduan singkat dan dokumentasi proses pengerjaan.  
 
 ---
 
 ## 🗂 Dataset
 Dataset yang digunakan dalam project ini terdiri dari 4 file CSV:  
-1. `kf_final_transaction.csv`  
-2. `kf_inventory.csv`  
-3. `kf_kantor_cabang.csv`  
-4. `kf_product.csv`  
+1. `kf_final_transaction.csv` → data transaksi Kimia Farma.  
+2. `kf_inventory.csv` → data stok persediaan cabang.  
+3. `kf_kantor_cabang.csv` → data kantor cabang (lokasi, kota, provinsi, rating).  
+4. `kf_product.csv` → data produk (kategori, harga, nama produk).  
 
-Semua dataset diimport ke **Google BigQuery** dalam 1 dataset bernama `kimia_farma`.
+Seluruh dataset di-*import* ke **Google BigQuery** dalam 1 dataset bernama `kimia_farma`.
+
+---
+
+## ⚙️ Langkah Pengerjaan
+1. **Import Data ke BigQuery**  
+   Mengunggah keempat dataset (transaction, inventory, cabang, product) ke dalam BigQuery.  
+
+2. **Integrasi Data (SQL Query)**  
+   Membuat *tabel analisa* dengan menggabungkan 4 tabel utama menggunakan query SQL.  
+   Tabel ini berisi informasi lengkap seperti:  
+   - transaksi (ID, tanggal, customer)  
+   - cabang (ID, kota, provinsi, rating)  
+   - produk (nama, kategori, harga)  
+   - perhitungan tambahan (nett_sales, nett_profit, rating_transaksi).  
+
+3. **Perhitungan Analisis**  
+   - *Nett Sales* = harga produk – diskon.  
+   - *Nett Profit* = nett sales × persentase gross laba (berdasarkan kategori harga).  
+   - *Rating Transaksi* = skor performa dari data transaksi.  
+
+4. **Visualisasi Dashboard**  
+   Menghubungkan tabel analisa di BigQuery dengan **Google Looker Studio**, lalu membuat dashboard interaktif yang menampilkan:  
+   - total penjualan dan profit  
+   - top produk dan cabang  
+   - distribusi transaksi per provinsi  
+   - tren performa bisnis Kimia Farma.  
 
 ---
 
