@@ -28,19 +28,19 @@ Seluruh dataset di-*import* ke **Google BigQuery** dalam 1 dataset bernama `kimi
 
 2. **Integrasi Data (SQL Query)**  
    Membuat *tabel analisa* dengan menggabungkan 4 tabel utama menggunakan query SQL.  
-   Tabel ini berisi informasi lengkap seperti:  
+   Tabel ini berisi informasi lengkap seperti:
    - transaksi (ID, tanggal, customer)  
    - cabang (ID, kota, provinsi, rating)  
    - produk (nama, kategori, harga)  
    - perhitungan tambahan (nett_sales, nett_profit, rating_transaksi).  
 
-3. **Perhitungan Analisis**  
+4. **Perhitungan Analisis**
    - *Nett Sales* = harga produk – diskon.  
    - *Nett Profit* = nett sales × persentase gross laba (berdasarkan kategori harga).  
    - *Rating Transaksi* = skor performa dari data transaksi.  
 
-4. **Visualisasi Dashboard**  
-   Menghubungkan tabel analisa di BigQuery dengan **Google Looker Studio**, lalu membuat dashboard interaktif yang menampilkan:  
+6. **Visualisasi Dashboard**  
+   Menghubungkan tabel analisa di BigQuery dengan **Google Looker Studio**, lalu membuat dashboard interaktif yang menampilkan:
    - total penjualan dan profit  
    - top produk dan cabang  
    - distribusi transaksi per provinsi  
